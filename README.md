@@ -52,3 +52,70 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 jupyter notebook
+
+### 📊 Data Summary
+
+The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
+
+- **Total Records**: 79,641  
+- **UFO Sightings**: 77,821  
+- **Drone Sightings**: 1,820  
+- **Date Range**: January 1, 2022 — December 20, 2022  
+- **Most Common State**: California (`ca`)  
+- **Most Common City**: Seattle  
+- **Total Columns**: 10  
+- **Missing Values**: All missing values were removed from key columns before analysis
+
+This dataset includes both:
+- **Quantitative data** (e.g., date, month, latitude, longitude)
+- **Qualitative data** (e.g., state, city, type, summary)
+
+The data is well-suited for time series analysis, geographic plotting, and pattern comparison between reported UFO and drone sightings across the United States.
+
+| Column Name          | Description                                                            |
+| -------------------- | ---------------------------------------------------------------------- |
+| `date_only`          | Date of the sighting report (formatted as YYYY-MM-DD)                  |
+| `City`               | City where the sighting occurred                                       |
+| `State`              | U.S. state abbreviation where the sighting was reported                |
+| `type`               | Type of sighting: `"ufo"` or `"drone"`                                 |
+| `Summary`            | Description or narrative of the reported sighting                      |
+| `month`              | Numeric month extracted from the sighting date (1 = Jan, 12 = Dec)     |
+| `latitude`           | Approximate latitude coordinate of the sighting location               |
+| `longitude`          | Approximate longitude coordinate of the sighting location              |
+| `nearest_park`       | Name of the closest U.S. National Park to the sighting                 |
+| `population_density` | Estimated population density (people per square mile) for the location |
+
+
+### 📊 Data Summary
+
+The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
+
+- **Total Records**: 79,641  
+- **UFO Sightings**: 77,821  
+- **Drone Sightings**: 1,820  
+- **Date Range**: January 1, 2022 — December 20, 2022  
+- **Most Common State**: California (`ca`)  
+- **Most Common City**: Seattle  
+- **Total Columns**: 10  
+- **Missing Values**: All missing values were removed from key columns before analysis
+
+This dataset includes both:
+- **Quantitative data** (e.g., date, month, latitude, longitude)
+- **Qualitative data** (e.g., state, city, type, summary)
+
+The data is well-suited for time series analysis, geographic plotting, and pattern comparison between reported UFO and drone sightings across the United States.
+
+### 📂 Data Source
+
+This project uses open-source data from two primary sources:
+
+- **UFO Sightings Dataset**  
+  Source: [National UFO Reporting Center](https://nuforc.org/data/)  
+  Description: This dataset contains thousands of reports of UFO sightings across the United States, including date, time, location, and summary information.
+
+- **Drone Sightings Dataset**  
+  Source: [Federal Aviation Administration (FAA)](https://www.faa.gov/uas/resources/public_records/uas_sightings_report)  
+  Description: This dataset includes preliminary reports from FAA on drone sightings by pilots and air traffic controllers, with dates, locations, and event summaries.
+
+All data was downloaded in CSV format and cleaned using Python.
+
