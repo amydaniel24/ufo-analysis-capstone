@@ -119,3 +119,12 @@ This project uses open-source data from two primary sources:
 
 All data was downloaded in CSV format and cleaned using Python.
 
+### 🗂️ Version Control and GitHub Practices
+
+This project follows professional version control practices:
+
+- All work was tracked using **Git**, with **at least 10 commits** made throughout the development process.
+- Commits were performed using the **command line interface (CLI)**, not the GitHub web uploader.
+- Each commit includes a meaningful message to reflect changes made during that session.
+- The complete project—including code, data, and documentation—is maintained in a **GitHub repository**:  
+  👉 [https://github.com/amydaniel24/ufo-analysis-capstone](https://github.com/amydaniel24/ufo-analysis-capstone)
