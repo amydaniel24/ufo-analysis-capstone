@@ -128,3 +128,16 @@ This project follows professional version control practices:
 - Each commit includes a meaningful message to reflect changes made during that session.
 - The complete project—including code, data, and documentation—is maintained in a **GitHub repository**:  
   👉 [https://github.com/amydaniel24/ufo-analysis-capstone](https://github.com/amydaniel24/ufo-analysis-capstone)
+
+  ### 📓 Notebook Guidelines
+
+This project is developed and presented in a **Jupyter Notebook**, following best practices for readability and clarity:
+
+- 🧠 **Markdown cells** explain the purpose, logic, and results of the code throughout the notebook.
+- 🧼 **Clean and organized structure**: Test code and scratch work have been removed.
+- 🧑‍💻 **Consistent formatting** is used for readability, including proper spacing, headers, and labels.
+- 📊 **Visualizations** use clear titles, labeled axes, and cohesive color palettes to improve interpretability.
+- 📁 All datasets are loaded using **relative file paths** (e.g., `./data/file.csv`) to ensure cross-system compatibility.
+
+> The notebook is designed for users without a coding background to follow the full data analysis journey.
+
