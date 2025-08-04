@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 jupyter notebook
 
-### 📊 Data Summary
+###  Data Summary
 
 The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
 
@@ -86,7 +86,7 @@ The data is well-suited for time series analysis, geographic plotting, and patte
 | `population_density` | Estimated population density (people per square mile) for the location |
 
 
-### 📊 Data Summary
+###  Data Summary
 
 The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
 
@@ -105,7 +105,7 @@ This dataset includes both:
 
 The data is well-suited for time series analysis, geographic plotting, and pattern comparison between reported UFO and drone sightings across the United States.
 
-### 📂 Data Source
+###  Data Source
 
 This project uses open-source data from two primary sources:
 
@@ -119,7 +119,7 @@ This project uses open-source data from two primary sources:
 
 All data was downloaded in CSV format and cleaned using Python.
 
-### 🗂️ Version Control and GitHub Practices
+###  Version Control and GitHub Practices
 
 This project follows professional version control practices:
 
@@ -127,17 +127,17 @@ This project follows professional version control practices:
 - Commits were performed using the **command line interface (CLI)**, not the GitHub web uploader.
 - Each commit includes a meaningful message to reflect changes made during that session.
 - The complete project—including code, data, and documentation—is maintained in a **GitHub repository**:  
-  👉 [https://github.com/amydaniel24/ufo-analysis-capstone](https://github.com/amydaniel24/ufo-analysis-capstone)
+   [https://github.com/amydaniel24/ufo-analysis-capstone](https://github.com/amydaniel24/ufo-analysis-capstone)
 
-  ### 📓 Notebook Guidelines
+  ###  Notebook Guidelines
 
 This project is developed and presented in a **Jupyter Notebook**, following best practices for readability and clarity:
 
-- 🧠 **Markdown cells** explain the purpose, logic, and results of the code throughout the notebook.
-- 🧼 **Clean and organized structure**: Test code and scratch work have been removed.
-- 🧑‍💻 **Consistent formatting** is used for readability, including proper spacing, headers, and labels.
-- 📊 **Visualizations** use clear titles, labeled axes, and cohesive color palettes to improve interpretability.
-- 📁 All datasets are loaded using **relative file paths** (e.g., `./data/file.csv`) to ensure cross-system compatibility.
+- **Markdown cells** explain the purpose, logic, and results of the code throughout the notebook.
+- **Clean and organized structure**: Test code and scratch work have been removed.
+- **Consistent formatting** is used for readability, including proper spacing, headers, and labels.
+- **Visualizations** use clear titles, labeled axes, and cohesive color palettes to improve interpretability.
+- All datasets are loaded using **relative file paths** (e.g., `./data/file.csv`) to ensure cross-system compatibility.
 
 > The notebook is designed for users without a coding background to follow the full data analysis journey.
 
