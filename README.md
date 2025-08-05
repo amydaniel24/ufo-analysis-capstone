@@ -141,3 +141,25 @@ This project is developed and presented in a **Jupyter Notebook**, following bes
 
 > The notebook is designed for users without a coding background to follow the full data analysis journey.
 
+---
+
+## ✅ Capstone Completion Checklist
+
+| Requirement                                      | Status   |
+|--------------------------------------------------|----------|
+| Uses at least two open-source datasets           | ✅        |
+| Each dataset has 1,000+ rows and 10+ columns     | ✅        |
+| Includes both qualitative & quantitative data    | ✅        |
+| Project folder is structured and readable        | ✅        |
+| README includes project overview & setup steps   | ✅        |
+| Notebook includes Markdown cells with analysis   | ✅        |
+| Uses relative file paths                         | ✅        |
+| Includes data dictionary                         | ✅        |
+| Includes data summary                            | ✅        |
+| Includes visualizations                          | ✅        |
+| Shows findings from analysis                     | ✅        |
+| GitHub repo has at least 10 commits              | ✅        |
+| Final summary & conclusion in notebook           | ✅        |
+| All code is clean, readable, and commented       | ✅        |
+
+Project Complete ✅
