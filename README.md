@@ -1,86 +1,94 @@
-# UFO and Drone Sightings Analysis Capstone
 
-## Overview
+# UFO and Drone Sightings Analysis
 
-This project explores the patterns  between UFO sightings and drone activity across the United States. By combining publicly available datasets on UFOs, drone incidents, national parks, and population density, I looked for potential overlaps in timing, geography, and reporting trends.
+## Project Overview
 
-## Project Objective
+This project analyzes reported sightings of UFOs and drones across the United States. The goal is to see if there are patterns in the data and how proximity to national parks or population density plays a role.
 
-To analyze whether there is a correlation between UFO sightings and drone sightings in the U.S., and to examine how factors like location (proximity to national parks) and time (by year or month) might influence reporting.
+## Problem Statement
 
-## Table of Contents
+Man has always looked to the stars for answers, but these days, there are lots of questions about what we are seeing. Public interest in UFO's and Drones has increased rapidly in the last several years. This project aims to investigate:
+- Where and when these sightings occur most frequently.
+- Whether there's a geographic overlap between UFO and drone sightings.
+- If sightings cluster around national parks or in more populated areas.
 
-1. Overview
-2. Project Objective
-3. Datasets
-4. Setup Instructions
-5. Usage
-6. Project Structure
-7. Project Features
-8. Final Visualizations
-9. Future Work
+## Goals and Objectives
 
-## Datasets
+1. Clean and merge data from multiple sources (UFOs, drones, national parks, and population density).
+2. Explore trends over time and geography.
+3. Visualize patterns across cities and states.
+4. Examine correlations between sightings and proximity to national parks.
+5. Present findings in a clear, interactive notebook with visuals.
 
-- **UFO Sightings Dataset:** [Source](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
-- **Drone Sightings Dataset:** FAA reports obtained from public sources
-- **National Parks Locations:** U.S. National Park Service data
-- **Population Density by State:** Open-source data compiled from census.gov
+## Data Sources
 
-## Setup Instructions
+- UFO Sightings: [NUFORC Data via Kaggle](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
+- Drone Sightings: [FAA Drone Reports](https://www.faa.gov/uas/resources/public_records/uas_sightings_report)
+- National Parks: [National Park Service API](https://www.nps.gov/subjects/developer/api-documentation.htm)
+- Population Data: [U.S. Census Data](https://www.census.gov/data.html)
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/amydaniel24/ufo-analysis-capstone.git
-   cd ufo-analysis-capstone
-   ```
+## Technologies Used
 
-2. Open the project in VS Code
-
-3. (Optional) Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # macOS/Linux
-   .\venv\Scripts\activate  # Windows
-   ```
-
-4. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Run the notebook:
-   Open `notebooks/final_capstone_notebook.ipynb` and run all cells.
+- Python
+- Pandas, NumPy
+- Plotly, Matplotlib, Seaborn
+- Jupyter Notebook (VS Code)
+- Git and GitHub
 
 ## Project Structure
 
 ```
 ufo-analysis-capstone/
-│
-├── data/                     # Raw and cleaned datasets
-├── notebooks/                # Jupyter notebooks
-│   └── final_capstone_notebook.ipynb
-├── README.md                 # Project overview and instructions
-├── requirements.txt          # Python dependencies
-├── visuals/                  # Saved plots and graphs
-└── output/                   # HTML version of final notebook
+├── data/
+│   ├── [CSV files for each dataset]
+├── notebooks/
+│   ├── final_capstone_notebook.ipynb
+│   └── final_capstone_notebook.html
+├── README.md
+├── requirements.txt
 ```
 
-## Features
+## How to Run This Project
 
-- Cleaned and merged data from multiple sources
-- Analysis of sighting frequencies by year and state
-- notebooks\final_capstone_notebook.ipynb
-- Visuals with Plotly and Mapbox
-- Spatial comparison near National Parks
-- Comparison of reporting trends between UFO and drone sightings
+### Option 1: Run on Your Local Machine
 
-## Final Visuals
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/amydaniel24/ufo-analysis-capstone.git
+cd ufo-analysis-capstone
+```
 
-Key visuals are available in the final notebook and the HTML export in the `output/` directory.
+#### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-## Future Work
+#### 3. Launch the Notebook
+```bash
+cd notebooks
+jupyter notebook final_capstone_notebook.ipynb
+```
 
-- Improve location matching accuracy for drone sightings
-- Build classification model to predict likelihood of misclassification
-- Incorporate FAA incident severity or description fields into analysis
+Or open the `.ipynb` file in VS Code with the Python extension installed.
+
+---
+
+### Option 2: Run Online (No Installation Required)
+
+1. Go to [Google Colab](https://colab.research.google.com/)
+2. Click **"GitHub"** tab and enter: `amydaniel24/ufo-analysis-capstone`
+3. Select `final_capstone_notebook.ipynb`
+4. Click **"Run All"** (ensure you upload the required data files if prompted)
+
+---
+
+## Author
+
+Amy Daniel  
+[GitHub Profile](https://github.com/amydaniel24)
+
+---
+
+## Summary
+
+This project showcases exploratory data analysis and geospatial insights into UFO and drone sightings across the U.S., integrating multiple datasets and using data visualization to reveal patterns worth further investigation.
