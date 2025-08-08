@@ -1,165 +1,86 @@
-# UFO & Drone Sightings Analysis
+# UFO and Drone Sightings Analysis Capstone
 
-## Project Overview
+## Overview
 
-This project explores UFO and drone sightings across the United States using open-source data. By merging reports of unexplained aerial phenomena with FAA drone encounter logs, we aim to uncover patterns in time, geography, and frequency. The project is designed for those interested in data analysis, public safety, or curious phenomena.
-
----
+This project explores the patterns  between UFO sightings and drone activity across the United States. By combining publicly available datasets on UFOs, drone incidents, national parks, and population density, I looked for potential overlaps in timing, geography, and reporting trends.
 
 ## Project Objective
 
-**Can UFO and drone sightings be compared by location and time? Are there regional or seasonal patterns that suggest overlap or misidentification between them?**  
-This analysis seeks to uncover trends and correlations between these sightings using data wrangling, visualization, and geospatial plotting.
+To analyze whether there is a correlation between UFO sightings and drone sightings in the U.S., and to examine how factors like location (proximity to national parks) and time (by year or month) might influence reporting.
 
----
+## Table of Contents
 
-## Technologies Used
+1. Overview
+2. Project Objective
+3. Datasets
+4. Setup Instructions
+5. Usage
+6. Project Structure
+7. Project Features
+8. Final Visualizations
+9. Future Work
 
-- **Python** – Core language for data cleaning, analysis, and visualization  
-- **Pandas** – For reading, cleaning, transforming, and merging datasets  
-- **Matplotlib & Seaborn** – Used to create bar and line charts for comparison  
-- **Plotly Express** – Used for interactive maps of sightings across geographic regions  
-- **Jupyter Notebooks** – Used for documenting the project and presenting findings  
-- **Git & GitHub** – Used for version control and project sharing
+## Datasets
 
----
+- **UFO Sightings Dataset:** [Source](https://www.kaggle.com/datasets/NUFORC/ufo-sightings)
+- **Drone Sightings Dataset:** FAA reports obtained from public sources
+- **National Parks Locations:** U.S. National Park Service data
+- **Population Density by State:** Open-source data compiled from census.gov
 
-## Project Setup Instructions
+## Setup Instructions
 
-### Prerequisites
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/amydaniel24/ufo-analysis-capstone.git
+   cd ufo-analysis-capstone
+   ```
 
-Ensure you have the following installed:
-- Python 3.8+
-- pip
-- Git
-- VS Code or another IDE
+2. Open the project in VS Code
 
-### Setup Steps
+3. (Optional) Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # macOS/Linux
+   .\venv\Scripts\activate  # Windows
+   ```
 
-1. **Clone the Repository**
+4. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```bash
-git clone https://github.com/amydaniel24/ufo-analysis-capstone.git
-cd ufo-analysis-capstone
-python -m venv venv
+5. Run the notebook:
+   Open `notebooks/final_capstone_notebook.ipynb` and run all cells.
 
-# On Windows:
-venv\Scripts\activate
+## Project Structure
 
-# On macOS/Linux:
-source venv/bin/activate
+```
+ufo-analysis-capstone/
+│
+├── data/                     # Raw and cleaned datasets
+├── notebooks/                # Jupyter notebooks
+│   └── final_capstone_notebook.ipynb
+├── README.md                 # Project overview and instructions
+├── requirements.txt          # Python dependencies
+├── visuals/                  # Saved plots and graphs
+└── output/                   # HTML version of final notebook
+```
 
-pip install -r requirements.txt
+## Features
 
-jupyter notebook
+- Cleaned and merged data from multiple sources
+- Analysis of sighting frequencies by year and state
+- notebooks\final_capstone_notebook.ipynb
+- Visuals with Plotly and Mapbox
+- Spatial comparison near National Parks
+- Comparison of reporting trends between UFO and drone sightings
 
-###  Data Summary
+## Final Visuals
 
-The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
+Key visuals are available in the final notebook and the HTML export in the `output/` directory.
 
-- **Total Records**: 79,641  
-- **UFO Sightings**: 77,821  
-- **Drone Sightings**: 1,820  
-- **Date Range**: January 1, 2022 — December 20, 2022  
-- **Most Common State**: California (`ca`)  
-- **Most Common City**: Seattle  
-- **Total Columns**: 10  
-- **Missing Values**: All missing values were removed from key columns before analysis
+## Future Work
 
-This dataset includes both:
-- **Quantitative data** (e.g., date, month, latitude, longitude)
-- **Qualitative data** (e.g., state, city, type, summary)
-
-The data is well-suited for time series analysis, geographic plotting, and pattern comparison between reported UFO and drone sightings across the United States.
-
-| Column Name          | Description                                                            |
-| -------------------- | ---------------------------------------------------------------------- |
-| `date_only`          | Date of the sighting report (formatted as YYYY-MM-DD)                  |
-| `City`               | City where the sighting occurred                                       |
-| `State`              | U.S. state abbreviation where the sighting was reported                |
-| `type`               | Type of sighting: `"ufo"` or `"drone"`                                 |
-| `Summary`            | Description or narrative of the reported sighting                      |
-| `month`              | Numeric month extracted from the sighting date (1 = Jan, 12 = Dec)     |
-| `latitude`           | Approximate latitude coordinate of the sighting location               |
-| `longitude`          | Approximate longitude coordinate of the sighting location              |
-| `nearest_park`       | Name of the closest U.S. National Park to the sighting                 |
-| `population_density` | Estimated population density (people per square mile) for the location |
-
-
-###  Data Summary
-
-The merged dataset consists of reports from both UFO sightings and FAA-reported drone encounters in 2022. After cleaning and combining the data:
-
-- **Total Records**: 79,641  
-- **UFO Sightings**: 77,821  
-- **Drone Sightings**: 1,820  
-- **Date Range**: January 1, 2022 — December 20, 2022  
-- **Most Common State**: California (`ca`)  
-- **Most Common City**: Seattle  
-- **Total Columns**: 10  
-- **Missing Values**: All missing values were removed from key columns before analysis
-
-This dataset includes both:
-- **Quantitative data** (e.g., date, month, latitude, longitude)
-- **Qualitative data** (e.g., state, city, type, summary)
-
-The data is well-suited for time series analysis, geographic plotting, and pattern comparison between reported UFO and drone sightings across the United States.
-
-###  Data Source
-
-This project uses open-source data from two primary sources:
-
-- **UFO Sightings Dataset**  
-  Source: [National UFO Reporting Center](https://nuforc.org/data/)  
-  Description: This dataset contains thousands of reports of UFO sightings across the United States, including date, time, location, and summary information.
-
-- **Drone Sightings Dataset**  
-  Source: [Federal Aviation Administration (FAA)](https://www.faa.gov/uas/resources/public_records/uas_sightings_report)  
-  Description: This dataset includes preliminary reports from FAA on drone sightings by pilots and air traffic controllers, with dates, locations, and event summaries.
-
-All data was downloaded in CSV format and cleaned using Python.
-
-###  Version Control and GitHub Practices
-
-This project follows professional version control practices:
-
-- All work was tracked using **Git**, with **at least 10 commits** made throughout the development process.
-- Commits were performed using the **command line interface (CLI)**, not the GitHub web uploader.
-- Each commit includes a meaningful message to reflect changes made during that session.
-- The complete project—including code, data, and documentation—is maintained in a **GitHub repository**:  
-   [https://github.com/amydaniel24/ufo-analysis-capstone](https://github.com/amydaniel24/ufo-analysis-capstone)
-
-  ###  Notebook Guidelines
-
-This project is developed and presented in a **Jupyter Notebook**, following best practices for readability and clarity:
-
-- **Markdown cells** explain the purpose, logic, and results of the code throughout the notebook.
-- **Clean and organized structure**: Test code and scratch work have been removed.
-- **Consistent formatting** is used for readability, including proper spacing, headers, and labels.
-- **Visualizations** use clear titles, labeled axes, and cohesive color palettes to improve interpretability.
-- All datasets are loaded using **relative file paths** (e.g., `./data/file.csv`) to ensure cross-system compatibility.
-
-> The notebook is designed for users without a coding background to follow the full data analysis journey.
-
----
-
-## ✅ Capstone Completion Checklist
-
-| Requirement                                      | Status   |
-|--------------------------------------------------|----------|
-| Uses at least two open-source datasets           | ✅        |
-| Each dataset has 1,000+ rows and 10+ columns     | ✅        |
-| Includes both qualitative & quantitative data    | ✅        |
-| Project folder is structured and readable        | ✅        |
-| README includes project overview & setup steps   | ✅        |
-| Notebook includes Markdown cells with analysis   | ✅        |
-| Uses relative file paths                         | ✅        |
-| Includes data dictionary                         | ✅        |
-| Includes data summary                            | ✅        |
-| Includes visualizations                          | ✅        |
-| Shows findings from analysis                     | ✅        |
-| GitHub repo has at least 10 commits              | ✅        |
-| Final summary & conclusion in notebook           | ✅        |
-| All code is clean, readable, and commented       | ✅        |
-
-Project Complete ✅
+- Improve location matching accuracy for drone sightings
+- Build classification model to predict likelihood of misclassification
+- Incorporate FAA incident severity or description fields into analysis
